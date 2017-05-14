@@ -21,7 +21,7 @@ filedata = ''
 # disqualify lines beginning with
 disqualifiers = ["/", "#"]
 if len(sys.argv) >= 4:
-    disqualifiers = sys.argv.split(",")
+    disqualifiers = sys.argv[3].split(",")
 
 # test on extensions (ext1, ext2)
 extensions = sys.argv[2].split(",")
