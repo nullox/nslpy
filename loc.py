@@ -17,8 +17,15 @@ if ( len(sys.argv[2]) == 0 ):
 loc = 0
 fc = 0
 filedata = ''
+
+# disqualify lines beginning with
 disqualifiers = ["/", "#"]
+if ( len(sys.argv) >= 4 )
+    disqualifiers = sys.argv.split(",")
+
+# test on extensions (ext1, ext2)
 extensions = sys.argv[2].split(",")
+
 for sd, d, filelist in os.walk(sys.argv[1]):
     for f in filelist:
         filepath = sd + os.sep + f
