@@ -20,7 +20,7 @@ filedata = ''
 
 # disqualify lines beginning with
 disqualifiers = ["/", "#"]
-if ( len(sys.argv) >= 4 )
+if len(sys.argv) >= 4:
     disqualifiers = sys.argv.split(",")
 
 # test on extensions (ext1, ext2)
