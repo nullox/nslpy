@@ -30,7 +30,7 @@ for sd, d, filelist in os.walk(sys.argv[1]):
     for f in filelist:
         filepath = sd + os.sep + f
         for extension in extensions:
-            if filepath.endswith(extension):
+            if filepath.endswith(extension.strip()):
                 fileh = open(filepath, 'r')
                 filedata = fileh.readlines()
                 fileh.close()
